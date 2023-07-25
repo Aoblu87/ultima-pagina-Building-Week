@@ -189,7 +189,9 @@ input:checked +label {
     color: #00ffff  ;
 }
 
-
+#divflex{
+    display:flex;
+}
 
 
 
