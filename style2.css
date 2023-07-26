@@ -15,12 +15,7 @@ body {
     background-size: cover;
 }
 
-header, img {
 
-    width: 150px;
-    margin-left: 45px;
-    margin-top: 30px;
-}
 
 
  
@@ -32,7 +27,7 @@ header, img {
     font-size: 30px;
     font-weight: 200;
     text-align: center;
-    width: 100%;
+    width: 80%;
     height: 100%;
 }
 
@@ -66,7 +61,7 @@ footer {
 .flex {
 
     display: flex;
-    width: 49%;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     margin: auto;
@@ -75,7 +70,7 @@ footer {
        display: flex;
         justify-content: space-around;
         box-sizing: border-box;
-        width: 145%;
+        width: 60%;
         height: 30vh;
     
         flex-wrap: wrap;
@@ -138,10 +133,6 @@ input:checked +label {
 
 }
 
-/* input[type='radio']:checked +label:before{
-    border-color: transparent;
-    background-color: transparent;
-} */
 
  input[type="radio"] {
     /*Add if not using autoprefixer */
@@ -188,10 +179,46 @@ input:checked +label {
     text-decoration: none;
     color: #00ffff  ;
 }
-
-#divflex{
+/*---------------------------------*/
+#flex-div{
     display:flex;
 }
 
+#logo{
+    display: flex;
+    
+    margin-top: 2%;
+    margin-bottom: 0%;
+    margin-left: 3%;
+}
+#logo img{
+    width: 15%;
+    margin: 0%;
+}
 
+header{
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
 
+#title{
+    margin-bottom: 3%;
+}
+
+#title h1{
+    margin: 0%;
+    font-size: 3em;
+}
+#title h5{
+    margin: 0%;
+}
+
+/*----------------CIRCLE-----------------------*/
+
+.c100.p50 .bar {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }

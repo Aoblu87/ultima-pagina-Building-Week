@@ -229,7 +229,7 @@ let span = document.querySelector("#tenAnswers")
 spanCounter.innerText = (count + 1) + " / "
 span.innerText = questions.length
 
-
+//--------------------------------------------------------------------------------------------------------------------
 
 // attivo la funzione del click
 function NextQuestionFunction(event) { // ad ogni click itera la prossima domanda 
@@ -356,22 +356,31 @@ function NextQuestionFunction(event) { // ad ogni click itera la prossima domand
       // TagP.innerText = "Hai risposto correttamente a " + RightAnswerCounter + " domande su 10 :)"
 
     } else {
-      let newDiv = document.createElement('div')
+
+      //vorrei rimuovere il div choices e button perchè occupano spazio inutile, ma probabilmente li eliminerò dall'html e li inserirò con JS
+      const removeDivChoices= document.querySelector('.choices')
+      const removeDivButton=document.querySelector('.buttonNext')
+
+      
+      
+      
+
+      const newDiv = document.createElement('div')
       newDiv.id = 'title'
 
       question.appendChild(newDiv)
 
-      let h1 = document.createElement('h1')
+      const h1 = document.createElement('h1')
 
       newDiv.appendChild(h1)
 
-      let h5 = document.createElement('h5')
+      const h5 = document.createElement('h5')
       newDiv.appendChild(h5)
 
       h1.innerText = 'Risultati'
 
       h5.innerText = 'Il riassunto delle tue risposte:'
-      let a = document.createElement('a')
+      const a = document.createElement('a')
       a.setAttribute('href', '#')
       a.classList.add('link')
       newDiv.appendChild(a)
@@ -379,47 +388,49 @@ function NextQuestionFunction(event) { // ad ogni click itera la prossima domand
 
 
 
-      let divFlex = document.createElement('div')
+      const divFlex = document.createElement('div')
       divFlex.id = 'flex-div'
       question.appendChild(divFlex)
 
 
-      let risultatiDiv = document.createElement('div')
+      const risultatiDiv = document.createElement('div')
       risultatiDiv.id = 'risultati-corretti'
       divFlex.appendChild(risultatiDiv)
 
-      let h3 = document.createElement('h3')
+      const h3 = document.createElement('h3')
       risultatiDiv.appendChild(h3)
       h3.innerText = "Hai risposto correttamente a " + RightAnswerCounter
-      let imgDiv = document.createElement('div')
+      const imgDiv = document.createElement('div')
       divFlex.appendChild(imgDiv)
       imgDiv.id = 'img-result'
 
 
 
-      let img = document.createElement('img')
+      const img = document.createElement('img')
       imgDiv.appendChild(img)
       img.src = '/assets/img.png'
       img.setAttribute('alt', 'img')
 
-      let risposteSbagliate = document.createElement('div')
-      risposteSbagliate.id='risposte-sbagliate'
+      const risposteSbagliate = document.createElement('div')
+      risposteSbagliate.id = 'risposte-sbagliate'
       divFlex.appendChild(risposteSbagliate)
 
-      let h3Sbagliate= document.createElement('h3')
-risposteSbagliate.appendChild(h3Sbagliate )
-h3Sbagliate.innerText= 'risposte sbagliate'
+      const h3Sbagliate = document.createElement('h3')
+      risposteSbagliate.appendChild(h3Sbagliate)
+      h3Sbagliate.innerText = 'risposte sbagliate'
 
-      let pDiv = document.createElement('div')
+      const pDiv = document.createElement('div')
       pDiv.id = 'paragrafo'
       question.appendChild(pDiv)
 
-      let paragraph = document.createElement('p')
-      pDiv.appendChild(paragraph)
-
-      let spanElement = document.createElement('span')
+      const spanElement = document.createElement('span')
       pDiv.appendChild(spanElement)
       spanElement.innerText = 'Congratulazioni, hai superato lesame!'
+
+      const paragraph = document.createElement('p')
+      pDiv.appendChild(paragraph)
+
+      
 
       paragraph.innerText = 'Ti invieremo un certificato in pochi minuti. Controlla la tua email (incluse promozioni e cartella spam)'
 
